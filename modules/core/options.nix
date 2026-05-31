@@ -27,6 +27,11 @@
       wrap = true;
     };
 
+    clipboard = {
+      enable = true;
+      registers = "unnamedplus";
+    };
+
     luaConfigRC.fillchars = ''
       vim.opt.fillchars  = "eob: "
     '';
