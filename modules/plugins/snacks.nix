@@ -4,7 +4,7 @@
       snacks-nvim = {
         enable = true;
         setupOpts = {
-          indent.enabled = true;
+          git.enabled = true;
           dashboard = {
             enabled = true;
             preset = {
@@ -22,31 +22,27 @@
             sections = [
               { section = "header"; }
               {
-                section = "keys";
-                padding = 2;
-              }
-
-              {
-                icon = " ";
-                desc = "Browse Repo";
+                title = "Git Status";
+                section = "terminal";
+                cmd = "git status --short --branch --renames";
+                height = 3;
                 padding = 1;
-                key = "b";
-
-                action = ''
-                  function()
-                    Snacks.gitbrowse()
-                  end
-                '';
+                ttl = 3 * 60;
+                inden = 3;
               }
-
+              {
+                title = "Projects";
+                section = "projects";
+                indent = 2;
+                padding = 1;
+              }
               {
                 title = "Recents";
                 section = "recent_files";
                 indent = 2;
-                limit = 8;
+                limit = 5;
                 padding = 1;
               }
-
             ];
           };
         };

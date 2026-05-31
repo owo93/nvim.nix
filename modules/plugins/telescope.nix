@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  config.vim = {
+  vim = {
     telescope = {
       enable = true;
 
