@@ -71,12 +71,42 @@
       desc = "Toggle file explorer";
     }
 
+    # ── Notifications (Noice) ──
+    {
+      key = "<leader>nn";
+      mode = "n";
+      silent = true;
+      action = "<cmd>Noice dismiss<CR>";
+      desc = "Dismiss notifications";
+    }
+    {
+      key = "<leader>nt";
+      mode = "n";
+      silent = true;
+      action = "<cmd>Noice last<CR>";
+      desc = "Toggle last notification";
+    }
+    {
+      key = "<leader>nl";
+      mode = "n";
+      silent = true;
+      action = "<cmd>Noice telescope<CR>";
+      desc = "Notification history";
+    }
+    {
+      key = "<leader>na";
+      mode = "n";
+      silent = true;
+      action = "<cmd>Noice all<CR>";
+      desc = "View all notifications";
+    }
+
     # ── QoL ──
     {
       key = "<Esc><Esc>";
       mode = [ "n" ];
       silent = true;
-      action = "<cmd>nohlsearch<CR>";
+      action = "<cmd>nohl<CR>";
       desc = "Clear search highlights";
     }
   ];
