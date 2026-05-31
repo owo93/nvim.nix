@@ -1,5 +1,5 @@
 {
-  description = "My nvf neovim configuration";
+  description = "owo93's neovim flake";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
@@ -55,7 +55,7 @@
             type = "app";
             program = "${nvimConfig.neovim}/bin/nvim";
             meta = {
-              description = "launch nvf config";
+              description = "owo93's neovim flake";
             };
           };
 
