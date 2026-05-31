@@ -6,6 +6,7 @@
     flake-parts.url = "github:hercules-ci/flake-parts";
     import-tree.url = "github:denful/import-tree";
     nvf.url = "github:notashelf/nvf";
+    git-hooks.url = "github:cachix/git-hooks.nix";
   };
 
   outputs =
@@ -16,6 +17,10 @@
       ...
     }@inputs:
     flake-parts.lib.mkFlake { inherit inputs; } {
+      imports = [
+        inputs.git-hooks.flakeModule
+      ];
+
       systems = [
         "x86_64-linux"
         "aarch64-linux"
@@ -37,7 +42,7 @@
       };
 
       perSystem =
-        { system, ... }:
+        { config, system, ... }:
         let
           pkgs = import inputs.nixpkgs {
             inherit system;
@@ -61,11 +66,16 @@
 
           formatter = pkgs.nixfmt;
           devShells.default = pkgs.mkShell {
+            inputsFrom = [ config.pre-commit.devShell ];
             packages = with pkgs; [
               nixfmt
               nixd
+              deadnix
             ];
           };
+
+          pre-commit.check.enable = true;
+          pre-commit.settings.hooks.deadnix.enable = true;
         };
     };
 }
