@@ -7,6 +7,10 @@
       lspkind.enable = true;
 
       inlayHints.enable = true;
+
+      mappings = {
+        hover = "<leader>K";
+      };
     };
   };
 }

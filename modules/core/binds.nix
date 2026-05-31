@@ -8,6 +8,7 @@
       "<leader>b" = "+Buffers";
       "<leader>c" = "+Code";
       "<leader>e" = "+Explorer";
+      "<leader>l" = "+LSP";
     };
 
     setupOpts = {

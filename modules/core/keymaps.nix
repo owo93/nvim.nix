@@ -30,32 +30,6 @@
       desc = "Find keymaps";
     }
 
-    # ── LSP ──
-    {
-      key = "K";
-      mode = "n";
-      silent = true;
-      action = "<cmd>vim.lsp.buf.hover<CR>";
-      desc = "Hover documentation";
-    }
-    {
-      key = "gd";
-      mode = "n";
-      silent = true;
-      action = "<cmd>lua vim.lsp.buf.definition()<CR>";
-      desc = "Go to definition";
-    }
-    {
-      key = "<leader>ca";
-      mode = [
-        "n"
-        "v"
-      ];
-      silent = true;
-      action = "<cmd>lua vim.lsp.buf.code_action()<CR>";
-      desc = "Code action";
-    }
-
     # ── Window Splits ──
     {
       key = "<leader>sv";
