@@ -22,6 +22,13 @@
       action = "<cmd>Telescope live_grep<CR>";
       desc = "Live grep";
     }
+    {
+      key = "<leader>fk";
+      mode = "n";
+      silent = true;
+      action = "<cmd>Telescope keymaps<CR>";
+      desc = "Find keymaps";
+    }
 
     # ── LSP ──
     {
