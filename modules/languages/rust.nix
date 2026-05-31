@@ -1,19 +1,17 @@
 {
   vim = {
-    languages.nix = {
+    languages.rust = {
       enable = true;
       treesitter.enable = true;
 
-      format = {
-        enable = true;
-        type = [ "nixfmt" ];
-      };
-
       lsp = {
         enable = true;
-        servers = [ "nixd" ];
+      };
+
+      format = {
+        enable = true;
+        type = [ "rustfmt" ];
       };
     };
-
   };
 }
