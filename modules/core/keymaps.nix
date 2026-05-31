@@ -96,5 +96,14 @@
       action = "<cmd>Neotree toggle<CR>";
       desc = "Toggle file explorer";
     }
+
+    # ── QoL ──
+    {
+      key = "<Esc><Esc>";
+      mode = [ "n" ];
+      silent = true;
+      action = "<cmd>nohlsearch<CR>";
+      desc = "Clear search highlights";
+    }
   ];
 }
