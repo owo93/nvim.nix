@@ -10,8 +10,6 @@
         previous = "<C-p>";
       };
 
-      sourcePlugins = { };
-
       setupOpts = {
         signature = {
           enabled = true;

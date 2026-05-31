@@ -16,10 +16,11 @@
       autoindent = true;
       shiftwidth = 2;
 
-      foldcolumn = "1";
+      foldcolumn = "0";
       foldlevel = 99;
       foldlevelstart = 99;
-      foldenable = false;
+      foldenable = true;
+      foldmethod = "expr";
 
       mouse = "nvi";
       cmdheight = 0;
@@ -33,7 +34,12 @@
     };
 
     luaConfigRC.fillchars = ''
-      vim.opt.fillchars  = "eob: "
+      vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+
+      vim.opt.fillchars:append({ eob = " " })
+
+      vim.diagnostic.config({ virtual_lines = true })
+      vim.diagnostic.config({ virtual_text = true })
     '';
   };
 }
