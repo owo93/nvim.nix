@@ -1,4 +1,15 @@
 # owo93's neovim flake
+My personal neovim flake, built with [NVF](https://nvf.notashelf.dev) with a modular structure for adding & setting up new languages, plugins, themes. Intended to be distributed and installed as a Home-Manager package.
+```
+<-. (`-')_      (`-')  _     <-. (`-')
+   \( OO) )    *(OO ) (*)       \(OO )_
+,--./ ,--/,--.(_/,-.\ ,-(`-'),--./  ,-.)
+|   \ |  |\   \ / (_/ | ( OO)|   `.'   |
+|  . '|  |)\   /   /  |  |  )|  |'.'|  |
+|  |\    |_ \     /_)(|  |_/ |  |   |  |
+|  | \   |\-'\   /    |  |'->|  |   |  |
+`--'  `--'    `-'     `--'   `--'   `----nix
+```
 
 ## Usage
 Run it directly:
