@@ -71,11 +71,20 @@
               nixfmt
               nixd
               deadnix
+              statix
             ];
           };
 
-          pre-commit.check.enable = true;
-          pre-commit.settings.hooks.deadnix.enable = true;
+          pre-commit = {
+            check.enable = true;
+            settings = {
+              hooks = {
+                deadnix.enable = true;
+                nixfmt.enable = true;
+                statix.enable = true;
+              };
+            };
+          };
         };
     };
 }
