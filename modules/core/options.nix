@@ -11,7 +11,6 @@
 
       tabstop = 2;
       softtabstop = 2;
-      showtabline = 2;
       expandtab = true;
 
       autoindent = true;

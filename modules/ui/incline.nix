@@ -2,13 +2,11 @@
 {
   vim = {
     startPlugins = [
-      pkgs.vimPlugins.nvim-navic
       pkgs.vimPlugins.incline-nvim
     ];
 
     pluginRC.incline = ''
       local helpers = require("incline.helpers")
-      local navic = require('nvim-navic')
       local devicons = require('nvim-web-devicons')
       local colors = require('solarized-osaka.colors').setup()
 
