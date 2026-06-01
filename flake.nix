@@ -10,12 +10,12 @@
   };
 
   outputs =
-    {
+    inputs@{
       flake-parts,
       import-tree,
       nvf,
       ...
-    }@inputs:
+    }:
     flake-parts.lib.mkFlake { inherit inputs; } {
       imports = [
         inputs.git-hooks.flakeModule
@@ -24,7 +24,6 @@
       systems = [
         "x86_64-linux"
         "aarch64-linux"
-        "x86_64-darwin"
         "aarch64-darwin"
       ];
 
@@ -42,32 +41,38 @@
       };
 
       perSystem =
-        { config, system, ... }:
+        {
+          pkgs,
+          config,
+          self',
+          ...
+        }:
         let
-          pkgs = import inputs.nixpkgs {
-            inherit system;
-          };
-
           nvimConfig = nvf.lib.neovimConfiguration {
             inherit pkgs;
             modules = [ (import-tree ./modules) ];
           };
         in
         {
-          packages.default = nvimConfig.neovim;
+          packages = {
+            nvim = nvimConfig.neovim;
+            default = self'.packages.nvim;
+          };
 
-          apps.default = {
-            type = "app";
-            program = "${nvimConfig.neovim}/bin/nvim";
-            meta = {
-              description = "owo93's neovim flake";
+          apps = {
+            nvim = {
+              type = "app";
+              program = "${self'.packages.default}/bin/nvim";
             };
+            default = self'.apps.nvim;
           };
 
           formatter = pkgs.nixfmt;
           devShells.default = pkgs.mkShell {
             inputsFrom = [ config.pre-commit.devShell ];
             packages = with pkgs; [
+              self'.packages.default
+
               nixfmt
               nixd
               deadnix
