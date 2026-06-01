@@ -7,6 +7,7 @@
     options = {
       number = true;
       relativenumber = true;
+      statuscolumn = "%l %s";
 
       tabstop = 2;
       softtabstop = 2;
