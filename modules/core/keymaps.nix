@@ -70,6 +70,13 @@
       action = "<cmd>Neotree toggle<CR>";
       desc = "Toggle file explorer";
     }
+    {
+      key = "<leader>fm";
+      mode = "n";
+      silent = true;
+      action = "<cmd>lua MiniFiles.open()<CR>";
+      desc = "Toggle mini.files";
+    }
 
     # ── Notifications (Noice) ──
     {
