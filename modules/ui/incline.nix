@@ -36,9 +36,9 @@
             display_filename = "[+] " .. filename
           end
 
-          local icon_bg = ft_color or colors.magenta600
-          local icon_fg = helpers.contrast_color(icon_bg)
-          
+          local icon_bg = ft_color or colors.magenta600 or "#e80045"
+          local icon_fg = helpers.contrast_color(icon_bg)          
+
           return {
             ft_icon and { " ", ft_icon, " ", guibg = icon_bg, guifg = icon_fg } or " ",
             { " ", guibg = colors.base04 },
