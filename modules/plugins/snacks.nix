@@ -24,7 +24,7 @@
               {
                 title = "Git Status";
                 section = "terminal";
-                cmd = "git status --short --branch --renames";
+                cmd = "git rev-parse --git-dir > /dev/null 2>&1 && git status --short --branch --renames || echo 'Git status unavailable\n, are you in a git repository?'";
                 height = 3;
                 padding = 1;
                 ttl = 3 * 60;
