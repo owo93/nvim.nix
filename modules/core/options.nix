@@ -7,7 +7,7 @@
     options = {
       number = true;
       relativenumber = true;
-      statuscolumn = "%l %s";
+      statuscolumn = " %l %s ";
 
       tabstop = 2;
       softtabstop = 2;
@@ -34,6 +34,7 @@
     };
 
     luaConfigRC.fillchars = ''
+      vim.opt.scrolloff = 999
       vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 
       vim.opt.fillchars:append({ eob = " " })
