@@ -10,5 +10,15 @@
         };
       };
     };
+
+    keymaps = [
+      {
+        key = "<leader>e";
+        mode = "n";
+        silent = true;
+        action = "<cmd>Neotree toggle<CR>";
+        desc = "Toggle file explorer";
+      }
+    ];
   };
 }
