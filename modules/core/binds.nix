@@ -10,6 +10,9 @@
         "<leader>c" = "+Code";
         "<leader>e" = "+Explorer";
         "<leader>l" = "+LSP";
+        "<leader>n" = "+Notifications";
+        "<leader>h" = "+Git Hunk";
+        "<leader>t" = "+Git";
       };
 
       setupOpts = {
@@ -17,6 +20,11 @@
         notify = true;
         win = {
           border = "rounded";
+          col = -1;
+          width = {
+            min = 24;
+            max = 32;
+          };
         };
       };
     };
