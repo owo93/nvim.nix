@@ -3,13 +3,6 @@
     autocomplete.blink-cmp = {
       enable = true;
 
-      mappings = {
-        complete = "<C-Space>";
-        confirm = "<CR>";
-        next = "<C-n>";
-        previous = "<C-p>";
-      };
-
       setupOpts = {
         signature = {
           enabled = true;
@@ -45,6 +38,7 @@
           };
         };
 
+        keymap.preset = "enter";
         cmdline.keymap.preset = "none";
 
         completion = {
