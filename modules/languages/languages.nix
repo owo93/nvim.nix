@@ -8,6 +8,7 @@ let
     "python"
     "html"
     "typescript"
+    "tsx"
     "toml"
     "json"
     "yaml"

@@ -1,8 +1,10 @@
 # owo93's neovim flake
 
-My personal neovim flake, built with [NVF](https://nvf.notashelf.dev) with a
-modular structure for adding & setting up new languages, plugins, themes.
-Intended to be distributed and installed as a Home-Manager package.
+![built with nix](https://img.shields.io/badge/-Built%20with%20Nix-darkslateblue)
+![GitHub License](https://img.shields.io/github/license/owo93/flake-templates)
+
+My personal neovim flake, built with [NVF](https://nvf.notashelf.dev). Intended
+to be distributed and installed as a Home-Manager package.
 
 ```text
 <─. (`─')_      (`─')  _     <─. (`─')  
