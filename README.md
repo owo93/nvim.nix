@@ -1,7 +1,7 @@
 # owo93's neovim flake
 
 ![built with nix](https://img.shields.io/badge/-Built%20with%20Nix-darkslateblue)
-![GitHub License](https://img.shields.io/badge/license-MIT-blue)
+![MIT License](https://img.shields.io/badge/license-MIT-blue)
 
 My personal neovim flake, built with [NVF](https://nvf.notashelf.dev). Intended
 to be distributed and installed as a Home-Manager package.
