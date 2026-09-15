@@ -1,4 +1,4 @@
-_: {
+{
   perSystem =
     {
       config,
@@ -7,8 +7,6 @@ _: {
       ...
     }:
     {
-      formatter = pkgs.nixfmt;
-
       devShells.default = pkgs.mkShell {
         inputsFrom = [ config.pre-commit.devShell ];
         packages = [

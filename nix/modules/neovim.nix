@@ -11,7 +11,7 @@
       packages.default =
         (inputs.nvf.lib.neovimConfiguration {
           inherit pkgs;
-          modules = [ (inputs.import-tree ../nvim) ];
+          modules = [ (inputs.import-tree ../../nvim) ];
         }).neovim;
 
       apps.default = {
