@@ -21,7 +21,7 @@ to be distributed and installed as a Home-Manager package.
 
 Run it directly:
 
-```bash
+```console
 nix run github:owo93/nvf
 ```
 
