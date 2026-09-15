@@ -4,7 +4,7 @@
 ![MIT License](https://img.shields.io/badge/license-MIT-blue)
 
 My personal neovim flake, built with [NVF](https://nvf.notashelf.dev). Intended
-to be distributed and installed as a Home-Manager package.
+to be distributed and installed as a Home-Manager module.
 
 ```text
 <─. (`─')_      (`─')  _     <─. (`─')  
@@ -31,26 +31,25 @@ Add this flake to your `inputs`:
 
 ```nix
 inputs.nvf = {
-    url = "github:owo93/nvf.git?refs=main";
+    url = "github:owo93/nvf.git?ref=main";
     inputs.nixpkgs.follows = "nixpkgs";
 };
 ```
 
-Pass `inputs` to Home-Manager's config through `extraSpecialArgs`:
+Import the Home-Manager module:
 
 ```nix
 homeConfigurations."o93" = home-manager.lib.homeManagerConfiguration {
     inherit pkgs;
 
-    extraSpecialArgs = {
-        inherit inputs;
-    };
-
-    modules = [ ./home.nix ];
+    modules = [
+        inputs.nvf.modules.homeManager.default
+        ./home.nix
+    ];
 };
 ```
 
-Install the package as a Home-Manager module:
+Or, if you only want the package:
 
 ```nix
 { pkgs, inputs, ... }: {

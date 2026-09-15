@@ -32,6 +32,7 @@
       ];
 
       imports = [
+        inputs.flake-parts.flakeModules.modules
         inputs.git-hooks.flakeModule
         inputs.treefmt-nix.flakeModule
         ./nix/modules
