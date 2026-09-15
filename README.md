@@ -60,19 +60,21 @@ Install the package as a Home-Manager module:
 }
 ```
 
-## Module Layout
+## Layout
 
-Modules passed under `modules/` are discovered automatically through
-[import-tree](https://github.com/denful/import-tree)
+Configuration modules under `nvim/` are discovered automatically through
+[import-tree](https://github.com/denful/import-tree), grouped by concern:
 
 ```text
 ├── README.md
 ├── flake.lock
 ├── flake.nix
-└── modules
-    ├── core
-    ├── languages       
-    ├── plugins         
-    ├── themes          
-    └── ui
+├── nix              # flake-parts modules (packaging, devshell, checks)
+└── nvim             # nvf configuration modules
+    ├── code         # LSP and completion
+    ├── core         # editor options and global keymaps
+    ├── editor       # editing and navigation
+    ├── integrations # git, schemastore, wakatime
+    ├── languages    # per-language configuration
+    └── ui           # appearance and notifications
 ```
