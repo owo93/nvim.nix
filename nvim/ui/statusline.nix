@@ -12,11 +12,13 @@
         };
         activeSection = {
           a = [
+            # lua
             ''{ "mode", separator = { left = "", right = "" }, right_padding = 4 }''
           ];
           b = [ ];
           y = [ "lsp_status" ];
           z = [
+            # lua
             ''{ "filetype", separator = { left = "", right = "" }, left_padding = 2 }''
           ];
         };

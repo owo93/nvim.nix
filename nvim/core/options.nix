@@ -34,14 +34,16 @@
       registers = "unnamedplus";
     };
 
-    luaConfigRC.fillchars = ''
-      vim.opt.scrolloff = 999
-      vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+    luaConfigRC.fillchars =
+      # vim
+      ''
+        vim.opt.scrolloff = 999
+        vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 
-      vim.opt.fillchars:append({ eob = " " })
+        vim.opt.fillchars:append({ eob = " " })
 
-      vim.diagnostic.config({ virtual_lines = true })
-      vim.diagnostic.config({ virtual_text = true })
-    '';
+        vim.diagnostic.config({ virtual_lines = true })
+        vim.diagnostic.config({ virtual_text = true })
+      '';
   };
 }

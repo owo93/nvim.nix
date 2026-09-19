@@ -2,7 +2,6 @@
   vim = {
     autocomplete.blink-cmp = {
       enable = true;
-
       setupOpts = {
         signature = {
           enabled = true;
@@ -17,8 +16,8 @@
         sources = {
           default = [
             "lsp"
-            "snippets"
             "path"
+            "snippets"
             "buffer"
           ];
 
