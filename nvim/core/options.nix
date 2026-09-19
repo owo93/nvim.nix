@@ -1,4 +1,4 @@
-{
+_: {
   vim = {
     undoFile.enable = true;
     globals = {

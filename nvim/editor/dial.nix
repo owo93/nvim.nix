@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{ pkgs, ... }: {
   vim = {
     extraPlugins.dial-nvim = {
       package = pkgs.vimPlugins.dial-nvim;

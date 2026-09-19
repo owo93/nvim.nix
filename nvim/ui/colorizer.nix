@@ -1,4 +1,4 @@
-{
+_: {
   vim = {
     ui.colorizer = {
       enable = true;

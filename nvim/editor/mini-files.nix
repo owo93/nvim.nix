@@ -1,4 +1,4 @@
-{
+_: {
   vim = {
     mini = {
       files.enable = true;

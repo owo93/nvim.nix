@@ -1,4 +1,4 @@
-{
+_: {
   vim.languages.typst = {
     enable = true;
     lsp.enable = true;

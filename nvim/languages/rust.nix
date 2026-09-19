@@ -1,4 +1,4 @@
-{
+_: {
   vim.languages.rust = {
     enable = true;
     lsp.enable = false;

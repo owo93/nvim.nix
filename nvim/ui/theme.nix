@@ -1,4 +1,4 @@
-{
+_: {
   vim.theme = {
     enable = true;
     name = "solarized-osaka";

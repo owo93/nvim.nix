@@ -1,4 +1,4 @@
-{
+_: {
   vim.languages.nix = {
     enable = true;
     lsp.enable = true;

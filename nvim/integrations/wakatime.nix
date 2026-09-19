@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{ pkgs, ... }: {
   vim = {
     extraPlugins = {
       vim-wakatime = {

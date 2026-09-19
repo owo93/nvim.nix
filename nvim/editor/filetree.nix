@@ -1,4 +1,4 @@
-{
+_: {
   vim = {
     filetree = {
       neo-tree = {

@@ -1,4 +1,4 @@
-{
+_: {
   vim.languages.html = {
     enable = true;
     lsp.enable = true;
