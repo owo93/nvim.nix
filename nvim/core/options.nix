@@ -6,6 +6,9 @@ _: {
     };
 
     options = {
+      exrc = true;
+      secure = true;
+
       number = true;
       relativenumber = true;
       statuscolumn = " %l %s ";
