@@ -1,6 +1,16 @@
 {
   description = "owo93's neovim flake";
 
+  nixConfig = {
+    extra-substituters = [
+      "https://owo93-nvf.cachix.org"
+    ];
+
+    extra-trusted-public-keys = [
+      "owo93-nvf.cachix.org-1:6rW8rHiWKzlA5SuZZJgQOr7Ow3TOm/JvRN3OCs5MvHQ="
+    ];
+  };
+
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     flake-parts = {
